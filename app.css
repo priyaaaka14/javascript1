@@ -1,0 +1,120 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    background-color: pink;
+}    
+#root{
+    display: block;
+    background-color: pink;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:150vh;
+    width: 100%;
+}
+
+h1 div{
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+#head{
+    padding-top: 30px;
+    font-size: 40px;
+}
+#location{
+    width: 40%;
+    padding:10px;
+    font-size: 25px;
+    color: navy;
+    background-color: palegoldenrod;
+    padding: 0px;
+}
+
+.container1{
+    margin-top: 20px;
+    padding-bottom: 30px;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    grid-gap: 10px;
+    grid-template-rows: auto auto 300px;
+    grid-template-columns: repeat(4,23%);
+}
+.container2{
+    margin-top: 20px;
+    padding-bottom: 30px;
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    grid-gap: 10px;
+    grid-column-gap:20px;
+    grid-template-rows: auto auto 200px auto auto 200px;
+    grid-template-columns: repeat(2,45%);
+}
+.mob{
+    margin-top:25px;
+}
+
+.box{
+    font-size: 40px;
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+    font-weight: 800;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.b1{
+    color: chartreuse;
+    text-emphasis: glow;
+    animation:none;
+    font-size: 25px;
+}
+
+img{
+    border:4px solid gold;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#map img{
+    padding-top: 0px;
+    width: 40%;
+    border-radius: 0%;
+}
+
+@media(max-width: 768px){
+    .box, #head{
+        font-size:20px;
+    }
+    .b1, #location{
+        font-size:13px;
+    }
+    .container1{
+       display: none;
+    }
+    .container2{
+        display: grid;
+    }
+}
+@media(min-width:769px) and (max-width: 1023px){
+    .box, #head{
+        font-size:30px;
+    }
+    .b1, #location{
+        font-size:18px;
+    }
+    .container1{
+        grid-gap: 11px;
+        grid-template-rows: auto auto 200px;
+        grid-template-columns: repeat(4,22.5%);
+    }
+
+}
